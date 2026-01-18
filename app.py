@@ -229,13 +229,3 @@ with tab2:
         margin=dict(b=80)
     )
     st.plotly_chart(fig, use_container_width=True)
-
-    # KPI CARDS BELOW VEHICLE PLOT
-    st.markdown("---")
-    st.subheader("Selected Vehicle Metrics")
-
-    fkpi1, fkpi2, fkpi3, fkpi4 = st.columns(4)
-    fkpi1.metric("Claims", f"{veh_claims:,}")
-    fkpi2.metric("Exposure", f"{veh_exposure:,.2f}")
-    fkpi3.metric("Claim Amount", f"${veh_claim_amount:,.0f}")
-    fkpi4.metric("Loss Ratio", f"{veh_loss_ratio:.2%}")
